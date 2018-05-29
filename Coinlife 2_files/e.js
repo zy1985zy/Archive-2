@@ -652,7 +652,7 @@
 
     var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
     var nebPay = new NebPay();
-    var serialNumber
+    var serialNumber;
         var to = dappContactAddress;
         var value = "0";
         var callFunction = "save";
