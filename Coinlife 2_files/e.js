@@ -671,7 +671,54 @@
     var txHash = "8f1ad354e2a5dd992ffaa3aa1b35fad074379760ca2e00d906e8b732809c03a3";*/
 //////////////////////////////////////////////////
 	});
-	
+	$('#phb').click(function(){
+        var to = dappAddress;
+        var value = "0";
+        var callFunction = "getAll";
+        var callArgs = "[]";
+        nebpay.simulateCall(to, value, callFunction, callArgs, {
+            listener: function(resp) {
+                //console.log(JSON.stringify(resp.result));
+				if(resp.result == ""){
+					$("#searchresult").html('<div class="panel-body" >暂时没有记录</div>');
+					return;
+				}
+                var myArr = JSON.parse(resp.result);
+				if(myArr.length == 0){
+					$("#searchresult").html('<div class="panel-body">暂时没有记录</div>');
+					return;
+				}
+
+                var tempStr = "";
+
+                for (var i = 0; i < myArr.length; i++) {
+                    if (i % 2 == 0) {
+                        tempStr += '<div class="panel-body"> ';
+                    } else {
+                        tempStr += '<div class="panel-footer">';
+                    }
+
+                    //					
+                    tempStr += '<p>';
+                    tempStr += myArr[i].title;
+                    tempStr += '</p>';
+                    tempStr += '<p>';
+                    tempStr += myArr[i].content;
+                    tempStr += '</p>';
+                    tempStr += '<p>';
+                    tempStr += '<small><cite>' + '作者：' + myArr[i].author + '</cite></small>';
+                    tempStr += '<br>';
+                    tempStr += '<a class="btn" href="javascript:void(0)" id="like" onclick="addLike(';
+                    tempStr += myArr[i].index;
+                    tempStr += ')">收藏</a>';
+
+                    tempStr += '</p> </div> ';
+                }
+                console.log(tempStr);
+                $("#searchresult").html(tempStr);
+            }
+          });
+        });									  
 	$('#reks').click(function(){
 		_z=2000;
 		_c=[0,100];
