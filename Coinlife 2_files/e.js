@@ -705,7 +705,7 @@
 
                     //					
                     tempStr += '<p>';
-                    tempStr += '资产：' + myArr[i].title;
+                    tempStr += '<cite>' + '资产：' + myArr[i].title '</cite>'; 
                     tempStr += '</p>';
                     tempStr += '<p>';
                     tempStr += '健康指数：' + myArr[i].content;
