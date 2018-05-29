@@ -672,6 +672,10 @@
 //////////////////////////////////////////////////
 	});
 	$('#phb').click(function(){
+	    var NebPay = require("nebpay"); //https://github.com/nebulasio/nebPay
+        var nebpay = new NebPay();	
+
+        var txHash = "9d751369cdaff6bcc3eb928fc5c4b1b03638231e9ca02c9025ccc1a9484b477b";
         var dappAddress = "n1obsZgkXmPiYZBVbzdMWCtCPcQAUkVbZpF";
         var to = dappAddress;
         var value = "0";
