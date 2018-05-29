@@ -705,17 +705,17 @@
 
                     //					
                     tempStr += '<p>';
-                    tempStr += myArr[i].title;
+                    tempStr += '资产：' + myArr[i].title;
                     tempStr += '</p>';
                     tempStr += '<p>';
-                    tempStr += myArr[i].content;
+                    tempStr += '健康指数：' + myArr[i].content;
                     tempStr += '</p>';
                     tempStr += '<p>';
-                    tempStr += '<small><cite>' + '作者：' + myArr[i].author + '</cite></small>';
+                    tempStr += '<small><cite>' + '玩家：' + myArr[i].author + '</cite></small>';
                     tempStr += '<br>';
-                    tempStr += '<a class="btn" href="javascript:void(0)" id="like" onclick="addLike(';
-                    tempStr += myArr[i].index;
-                    tempStr += ')">收藏</a>';
+//                    tempStr += '<a class="btn" href="javascript:void(0)" id="like" onclick="addLike(';
+//                    tempStr += myArr[i].index;
+//                    tempStr += ')">收藏</a>';
 
                     tempStr += '</p> </div> ';
                 }
