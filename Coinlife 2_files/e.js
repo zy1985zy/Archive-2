@@ -645,7 +645,7 @@
 			}
 		},'json');*/
 //////////////////////////////////////////////////
-    var dappContactAddress = "n1obsZgkXmPiYZBVbzdMWCtCPcQAUkVbZpF";
+    var dappContactAddress = "n1hiZCGvyjWYWDBiN2G2W9DCNx6nufBtPgW";
     var nebulas = require("nebulas"), Account = Account, neb = new nebulas.Neb();
 //    neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"))
     neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"))
@@ -675,8 +675,8 @@
 	    var NebPay = require("nebpay"); //https://github.com/nebulasio/nebPay
         var nebpay = new NebPay();	
 
-        var txHash = "9d751369cdaff6bcc3eb928fc5c4b1b03638231e9ca02c9025ccc1a9484b477b";
-        var dappAddress = "n1obsZgkXmPiYZBVbzdMWCtCPcQAUkVbZpF";
+        var txHash = "0ec26ceea66d5aae6185a8ff7737290c954ad8c984577ef92e547773f12e40fc";
+        var dappAddress = "n1hiZCGvyjWYWDBiN2G2W9DCNx6nufBtPgW";
         var to = dappAddress;
         var value = "0";
         var callFunction = "getAll";
